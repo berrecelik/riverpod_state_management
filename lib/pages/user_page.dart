@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:riverpod_state_management/pages/counter.dart';
 import 'package:riverpod_state_management/pages/detail_user.dart';
 import 'package:riverpod_state_management/provider/data_provider.dart';
 
 import '../models/user_model.dart';
+import 'images.dart';
+import 'number.dart';
 
 class UserPage extends ConsumerWidget {
   const UserPage({super.key});

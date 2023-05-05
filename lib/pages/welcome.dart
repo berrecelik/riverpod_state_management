@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:riverpod_state_management/pages/home_page.dart';
 import 'package:riverpod_state_management/pages/user_page.dart';
 import 'package:riverpod_state_management/provider/provider.dart';
 
@@ -100,7 +101,7 @@ class _WelcomePageState extends ConsumerState<WelcomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (builder) => UserPage()));
+                                builder: (builder) => HomePage()));
                       },
                       child: Text(
                         "Start",
