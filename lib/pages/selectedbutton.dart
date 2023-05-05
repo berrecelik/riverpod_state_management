@@ -16,7 +16,7 @@ class SelectedButton extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(selectedButton.toUpperCase() + " is selected.",
+            Text(selectedButton.toUpperCase() + " is selected",
                 style: GoogleFonts.philosopher(
                   fontSize: 25,
                 )),

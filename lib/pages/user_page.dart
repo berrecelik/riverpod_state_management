@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:riverpod_state_management/pages/counter.dart';
 import 'package:riverpod_state_management/pages/detail_user.dart';
 import 'package:riverpod_state_management/provider/data_provider.dart';
 
@@ -16,8 +15,7 @@ class UserPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green[700],
-        title: Center(
-            child: Text("Users", style: GoogleFonts.philosopher(fontSize: 30))),
+        title: Text("Users", style: GoogleFonts.philosopher(fontSize: 30)),
       ),
       body: _data.when(
           data: (_data) {
@@ -67,7 +65,9 @@ class UserPage extends ConsumerWidget {
           },
           error: (err, s) => Text(err.toString()),
           loading: () => Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.lightGreenAccent,
+                ),
               )),
     );
   }

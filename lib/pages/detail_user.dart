@@ -7,6 +7,7 @@ import 'package:riverpod_state_management/pages/counter.dart';
 import 'package:riverpod_state_management/pages/selectedbutton.dart';
 
 import '../models/user_model.dart';
+import 'number.dart';
 
 class DetailUser extends StatelessWidget {
   final User user;
@@ -39,10 +40,18 @@ class DetailUser extends StatelessWidget {
           Text(user.firstName! + " " + user.lastName!),
           Text(user.email!),
           Expanded(child: SelectedButton()),
-          // ElevatedButton(
-          //    onPressed: () => Navigator.push(context,
-          //       MaterialPageRoute(builder: (builder) => CounterPage())),
-          //  child: Text("c"))
+          ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green)),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => NumberPage()));
+              },
+              child: Text("Random Number Generator",
+                  style: GoogleFonts.philosopher(fontSize: 20))),
+          SizedBox(
+            height: 20,
+          )
         ],
       ),
     );
